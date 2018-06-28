@@ -1,0 +1,11 @@
+{
+    "ScraperConfig": {
+        "OutputPath": "/somewhere/you/want/the/scraped/data.json"
+    },
+    "BattleNetConfig": {
+        "BattleNetAccount": "someone@somewhere.net",
+        "BattleNetPassword": "supersecret",
+        "BattleNetAuthenticatorSerial": "EU-****-****-****",
+        "BattleNetAuthenticatorSecret": "aBase64ByteArrayAsString="
+    }
+}

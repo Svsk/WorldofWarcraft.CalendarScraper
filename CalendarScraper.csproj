@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle" Version="1.8.2" />
+    <PackageReference Include="Selenium.WEbDriver" Version="3.13.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="2.40.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder"  Version="1.1.2"  />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
+  </ItemGroup>
+
+  <Target Name="CopyToOut" BeforeTargets="BeforeBuild">
+    <Copy SourceFiles="Configuration/config.json" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Configuration/config.Local.json" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="CopyToOutOnPublish" AfterTargets="Publish"> 
+    <Copy SourceFiles="Configuration/config.json" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Configuration/config.Local.json" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

@@ -89,6 +89,7 @@ namespace CalendarScraper
                 }).ToList();
 
                 events.Add(new CalendarEvent {
+                    Id = eventId,
                     Name = eventName,
                     Type = type,
                     Instance = instance,

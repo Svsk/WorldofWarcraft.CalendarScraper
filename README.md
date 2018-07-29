@@ -1,6 +1,6 @@
 # WorldofWarcraft.CalendarScraper
 
-## No longer seems to work after guilds became communities in 8.0.
+## This application no longer seems to work after guilds became communities in 8.0.
 
 .NET Core Application for scraping calendar events from the legacy World of Warcraft Armory website. For use while awaiting support for similar functionality in the official Community API.
 
